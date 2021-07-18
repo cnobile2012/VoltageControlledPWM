@@ -1,0 +1,67 @@
+*Intersil CA3140, basic model drafted from datasheet.
+* 8, Strb -------------------------|
+* 7, V+   -----------------------| |
+* 6, Out  --------------------|  | |
+* 5, null -----------------|  |  | |
+* 4, Gnd  --------------|  |  |  | |
+* 3, +In  -----------|  |  |  |  | |
+* 2, -In  --------|  |  |  |  |  | |
+* 1, null -----|  |  |  |  |  |  | |
+*              |  |  |  |  |  |  | |
+.SUBCKT CA3140 31 21 23 15 30 16 1 12
+D1 N001 N002 Diode
+Q1 N005 N002 N001 0 PNP
+Q2 N007 N002 N001 0 PNP
+Q3 N006 N002 N001 0 PNP
+Q4 N012 N005 N006 0 PNP
+Q5 N024 N005 N007 0 PNP
+Q6 N011 N005 N002 0 PNP
+Q7 N005 N011 N017 0 NPN
+R1 N017 N015 8K
+M8 N020 N015 N011 N011 PMOS
+D2 N020 N015 Diode
+D3 N022 N021 Schottky
+D4 N022 N023 Schottky
+D5 N022 N024 Schottky
+M9 N025 N021 N024 N024 PMOS
+M10 N026 N023 N024 N024 PMOS
+R2 N025 N029 500R
+R3 N026 N027 500R
+Q11 N029 N025 N030 0 NPN
+Q12 N027 N025 N031 0 NPN
+R4 N030 N015 500R
+R5 N031 N015 500R
+Q13 N012 N027 N015 0 NPN
+C1 N027 N012 12pF
+Q14 N018 N020 N032 0 NPN
+Q15 N016 N020 N015 0 NPN
+Q16 N016 N028 N015 0 NPN
+D6 N028 N033 Diode
+R6 N032 N015 50R
+R7 N033 N015 30R
+Q17 N001 N012 N018 0 NPN
+R8 N018 N019 1K
+Q18 N013 N019 N016 0 NPN
+Q19 N006 N009 N013 0 NPN
+Q20 N001 N003 N008 0 NPN
+R9 N004 N010 50R
+R10 N009 N010 1K
+R11 N010 N013 20R
+R12 N008 N014 12K
+R13 N001 N003 5K
+R14 P001 N015 20K
+M21 N028 N016 N014 N014 PMOS
+D7 N001 N004 Diode
+D8 P001 N003 Schottky
+*
+*MODELS NEEDED FOR CA3140 INNARDS
+.model Diode D
+.model Schottky D
+.lib standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib standard.bjt
+.model NMOS NMOS
+.model PMOS PMOS
+.lib standard.mos
+.ends
