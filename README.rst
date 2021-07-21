@@ -65,7 +65,7 @@ TP1 gives you a square wave outputbut is not used in the calibration.
 Schematic
 =========
 
-.. image:: images/VoltageControlledPWM.png
+.. image:: images/VoltageControlledPWM-V1.0.png
   :width: 400
   :alt: Schematic
 
