@@ -4,6 +4,7 @@
 *#*#
 *.txt
 *.pdf
+!images/*.pdf
 *[.-]bak
 .~lock.*
 *.log
