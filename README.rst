@@ -71,6 +71,7 @@ Calibration
      Check that the PWM is 0 (zero) volts.
 
 Notes:
+
   1. In order to get 0 (full off) and 5/3.3 Volts (full on), on the PWM the
      sweep voltage may need to be slightly more than 10V peak-to-peak keeping
      the maximum triangle wave voltage at 10V peak-to-peak.
