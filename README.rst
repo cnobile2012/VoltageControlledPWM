@@ -41,9 +41,10 @@ as possible. This will also be true in the actual environment that this PWM
 will call home. If there is a slight offset between the absolute + and -
 voltages there will also be a slight offset between the internal zero crossing
 point of the triangle wave. Resistor R6 (460) can be adjusted to compensate for
-this. The two trimmers R9 and R11 can also affect the complete on or off of the
-PWM, that is where a 0 control voltage causes the output PWM to be 0 volts and
-the max 3.3/5 control voltage causes the PWM to be 3.3/5 volts.
+this. The two trimmers R9 and R11 can also affect a slightly off zero crossing
+by adjusting the complete on or off of the PWM, that is where a 0 control
+voltage causes the output PWM to be 0 volts and the max 3.3/5 control voltage
+causes the PWM to be 3.3/5 volts.
 
 Calibration
 -----------
@@ -76,13 +77,14 @@ Calibration
 Notes:
 
   1. In order to get 0 (full off) and 5/3.3 Volts (full on), on the PWM the
-     sweep voltage may need to be slightly more than 10V peak-to-peak keeping
-     the maximum triangle wave voltage at 10V peak-to-peak.
-  2. TP1 gives you a square wave output, however it is not used in the
-     calibration.
-  3. On Version 1 of the PCB the silk screen for the test points are rather
-     small and difficult to read. This will be fixed in version 2 of the PCB.
-     The photos below should help with identifying which TP is which.
+     sweep voltage may need to be slightly more than 10V peak-to-peak (R11)
+     assuming the maximum triangle wave voltage is still 10V
+     peak-to-peak. Adjusting the zero crossing with R9 may also be necessary.
+  2. TP1 provides a square wave output, however it is not used in any of the
+     calibrations.
+  3. On Version 1 of the PCB the silk screen for the TPs (test points) are
+     rather small and difficult to read. This will be fixed in version 2 of the
+     PCB. The photos below should help with identifying which TP is which.
 
 ==============
 PCBs Version 1
@@ -103,5 +105,8 @@ Schematic
 .. image:: images/VoltageControlledPWM-V1.0.png
   :width: 400
   :alt: Schematic
+
+I want to give attribution to `zero999 <https://www.eevblog.com/forum/beginners/simple-analog-function-generator-design/msg1174983/#msg1174983>`_
+for the oscillator part of my circuit.
 
 Feel free to contact me at: carl dot nobile at gmail.com
