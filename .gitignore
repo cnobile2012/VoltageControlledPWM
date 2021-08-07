@@ -12,6 +12,7 @@
 *.net
 *.plt
 *.fft
+KiCad/fp-info-cache
 logs/*.log*
 old
 docs/htmlcov

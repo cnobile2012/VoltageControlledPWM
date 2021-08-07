@@ -38,29 +38,50 @@ voltage. See below.
 Calibration
 -----------
 
-  1. The R1 trimmer is used to adjust the internal triangle peak-to-peak
-     reference voltage. This should nominally be 10 volts. Put your scope
-     probes between TP2 (Triangle Wave) and TP0 (GND) before adjusting R1.
-  2. The R3 trimmer is used to adjust the frequency of the triangle wave. This
-     should nominally be 25K Hertz. Put your scope or frequency counter probes
-     between TP2 (Triangle Wave) and TP0 (GND) before adjusting R3.
+  1. The R3 trimmer is used to adjust the internal triangle reference voltage.
+     This should nominally be 10 volts peak-to-peak with the trimmer set to
+     aproximatly 250K. Put your scope probes between TP2 (Triangle Wave) and
+     TP0 (GND) then adjust R3.
+  2. The R1 trimmer is used to adjust the frequency of the triangle wave. This
+     should nominally be 25K Hertz with the trimmer set to approximatly 24K.
+     Put your scope or frequency counter probes between TP2 (Triangle Wave)
+     and TP0 (GND) then adjust R1.
   3. The R9 trimmer is used to adjust the symmetry of the sweep voltage. This
-     is the Control Voltage that causes the modulation of the PWM
-     frequency. Adjust the variable power supply to 50% of 3.3V(1.65V) or
-     5V(2.5V) depending on your drive voltage then attach the supply to J3 and
-     attach the multimeter probes to TP3 (Sweep) and TP0 (GND). Double check
-     that the supply voltage is at 50% of your driving voltage then adjust R9
-     so the voltage on the multimeter is as close to 0 (zero) volts as
-     possible.
+     is the Control Voltage that adjusts the modulation of the PWM frequency.
+     Adjust the variable power supply to 50% of 3.3V (1.65V) or 5V (2.5V)
+     depending on your drive voltage then attach the supply to J3 and attach
+     the multimeter probes to TP3 (Sweep) and TP0 (GND). Double check that the
+     supply voltage is at 50% of your driving voltage then adjust R9 so the
+     voltage on the multimeter is as close to 0 (zero) volts as possible.
   4. The R11 trimmer is used to set the peak-to-peak of the sweep voltage. Put
-     the scope probes on J4 (PWM Output). Set the variable power supply to your
-     drive voltage 5V or 3.3V and attach it to TP0 (GND) and TP3 (Sweep).
-     Adjust R11 so that the PWM goes high with no pulses, turn the supply to
-     50% and check that the PWM is 50%, then turn the supply to 0 (zero) volts
-     or remove the supply and connect a wire across J3 (Voltage Control
-     Input). Check that the PWM is 0 (zero) volts.
+     the scope probes on TP3 (Sweep) and TP0 (GND) and set the scope channel
+     to DC. Set the variable power supply to your drive voltage 5V or 3.3V and
+     attach it to J3 (Voltage Control Input). Adjust R11 so that the scope
+     shows plus 5V. Adjust the supply to 0 (zero) volts (or short the two pins
+     on J3) and check that the voltage on the scope is -5V. See note 1 below.
+  5. Check the PWM. Adjust the supply voltage to 50% and check that the PWM is
+     50%, then adjust the supply to 0 (zero) (or just short the two pins on J3)
+     Check that the PWM is 0 (zero) volts.
 
-TP1 gives you a square wave output, however it is not used in the calibration.
+Notes:
+  1. In order to get 0 (full off) and 5/3.3 Volts (full on), on the PWM the
+     sweep voltage may need to be slightly more than 10V peak-to-peak keeping
+     the maximum triangle wave voltage at 10V peak-to-peak.
+
+  2. TP1 gives you a square wave output, however it is not used in the
+     calibration.
+
+==============
+PCBs Version 1
+==============
+
+.. image:: images/VoltageControlledPWM-V1.0-front.jpg
+  :width: 400
+  :alt: Circuit board Frontside image
+
+.. image:: images/VoltageControlledPWM-V1.0-back.jpg
+  :width: 400
+  :alt: Circuit board Backside image
 
 =========
 Schematic
@@ -69,6 +90,5 @@ Schematic
 .. image:: images/VoltageControlledPWM-V1.0.png
   :width: 400
   :alt: Schematic
-
 
 Feel free to contact me at: carl dot nobile at gmail.com
