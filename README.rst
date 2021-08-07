@@ -82,9 +82,9 @@ Notes:
      peak-to-peak. Adjusting the zero crossing with R9 may also be necessary.
   2. TP1 provides a square wave output, however it is not used in any of the
      calibrations.
-  3. On Version 1 of the PCB the silk screen for the TPs (test points) are
-     rather small and difficult to read. This will be fixed in version 2 of the
-     PCB. The photos below should help with identifying which TP is which.
+  3. On Version 1.0 of the PCB the silk screen for the TPs (test points) are
+     rather small and difficult to read. This will be fixed in version 2.0 of
+     the PCB. The photos below should help with identifying which TP is which.
 
 ==============
 PCBs Version 1
@@ -106,7 +106,7 @@ Schematic
   :width: 400
   :alt: Schematic
 
-I want to give attribution to `zero999 <https://www.eevblog.com/forum/beginners/simple-analog-function-generator-design/msg1174983/#msg1174983>`_
+I want to give attribution to `Zero999 <https://www.eevblog.com/forum/beginners/simple-analog-function-generator-design/msg1174983/#msg1174983>`_
 for the oscillator part of my circuit.
 
 Feel free to contact me at: carl dot nobile at gmail.com
