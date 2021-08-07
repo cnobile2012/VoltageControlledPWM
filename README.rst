@@ -36,11 +36,14 @@ Test Equipment
   5. Oscilloscope
   6. Frequency Counter (Optional--Can use the scope)
 
-First be sure your dual voltage power supply is as close to +12 and -12 volts
+First, be sure your dual voltage power supply is as close to +12 and -12 volts
 as possible. This will also be true in the actual environment that this PWM
 will call home. If there is a slight offset between the absolute + and -
-voltages there will also be a slight offset between the internal triangle wave
-voltage. See below.
+voltages there will also be a slight offset between the internal zero crossing
+point of the triangle wave. Resistor R6 (460) can be adjusted to compensate for
+this. The two trimmers R9 and R11 can also affect the complete on or off of the
+PWM, that is where a 0 control voltage causes the output PWM to be 0 volts and
+the max 3.3/5 control voltage causes the PWM to be 3.3/5 volts.
 
 Calibration
 -----------
