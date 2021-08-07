@@ -60,24 +60,26 @@ Calibration
      the multimeter probes to TP3 (Sweep) and TP0 (GND). Double check that the
      supply voltage is at 50% of your driving voltage then adjust R9 so the
      voltage on the multimeter is as close to 0 (zero) volts as possible.
-  4. The R11 trimmer is used to set the peak-to-peak of the sweep voltage. Put
-     the scope probes on TP3 (Sweep) and TP0 (GND) and set the scope channel
-     to DC. Set the variable power supply to your drive voltage 5V or 3.3V and
-     attach it to J3 (Voltage Control Input). Adjust R11 so that the scope
-     shows plus 5V. Adjust the supply to 0 (zero) volts (or short the two pins
-     on J3) and check that the voltage on the scope is -5V. See note 1 below.
-  5. Check the PWM. Adjust the supply voltage to 50% and check that the PWM is
-     50%, then adjust the supply to 0 (zero) (or just short the two pins on J3)
-     Check that the PWM is 0 (zero) volts.
+  4. The R11 trimmer is used to set the peak-to-peak of the sweep voltage. Set
+     the variable power supply to your drive voltage 5V or 3.3V and attach it
+     to J3 (Voltage Control Input). Attach the multimeter probes to TP3 (Sweep)
+     and TP0 (GND). Adjust R11 so that the multimeter shows plus 5V. Adjust the
+     supply to 0 (zero) volts (or short the two pins on J3) and check that the
+     voltage on the multimeter is -5V. See note 1 below.
+  5. Check the PWM. Adjust the supply voltage to 50% as was done in step 3
+     above and check that the PWM is 50%, then adjust the supply to 0 (zero)
+     (or just short the two pins on J3) Check that the PWM is 0 (zero) volts.
 
 Notes:
 
   1. In order to get 0 (full off) and 5/3.3 Volts (full on), on the PWM the
      sweep voltage may need to be slightly more than 10V peak-to-peak keeping
      the maximum triangle wave voltage at 10V peak-to-peak.
-
   2. TP1 gives you a square wave output, however it is not used in the
      calibration.
+  3. On Version 1 of the PCB the silk screen for the test points are rather
+     small and difficult to read. This will be fixed in version 2 of the PCB.
+     The photos below should help with identifying which TP is which.
 
 ==============
 PCBs Version 1
