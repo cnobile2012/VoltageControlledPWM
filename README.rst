@@ -3,6 +3,13 @@ Voltage-Controlled PWM Motor Controller
 ***************************************
 The MIT License (MIT)
 
+This circuit can supply either a 3.3 or 5 volt logic level PWM signal
+depending on the reference voltage used. The voltage control input can also
+be driven with either a 3.3 or 5 volt logic level signal depending on the
+how the circuit is calibrated.
+
+The PWM frequency can be adjusted in the range of 25K Hertz.
+
 =======
 LTspice
 =======
@@ -40,10 +47,10 @@ Calibration
 
   1. The R3 trimmer is used to adjust the internal triangle reference voltage.
      This should nominally be 10 volts peak-to-peak with the trimmer set to
-     aproximatly 250K. Put your scope probes between TP2 (Triangle Wave) and
+     approximately 250K. Put your scope probes between TP2 (Triangle Wave) and
      TP0 (GND) then adjust R3.
   2. The R1 trimmer is used to adjust the frequency of the triangle wave. This
-     should nominally be 25K Hertz with the trimmer set to approximatly 24K.
+     should nominally be 25K Hertz with the trimmer set to approximately 24K.
      Put your scope or frequency counter probes between TP2 (Triangle Wave)
      and TP0 (GND) then adjust R1.
   3. The R9 trimmer is used to adjust the symmetry of the sweep voltage. This
@@ -77,11 +84,11 @@ PCBs Version 1
 
 .. image:: images/VoltageControlledPWM-V1.0-front.jpg
   :width: 400
-  :alt: Circuit board Frontside image
+  :alt: Circuit board frontside image
 
 .. image:: images/VoltageControlledPWM-V1.0-back.jpg
   :width: 400
-  :alt: Circuit board Backside image
+  :alt: Circuit board backside image
 
 =========
 Schematic
